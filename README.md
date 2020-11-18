@@ -410,9 +410,11 @@ def train_diffusion(real_x):
 
 The official code is in [Github](https://github.com/Lingkai-Kong/SDE-Net) with pytorch, so when I train it using a colab, I got a similar result as suggested in the paper.  
 
-The file converted to Tensorflow was created separately and placed on the github, but the performance was different from that of Torch.  
-I thought I had created the same structure (except for adjusting the leading rate), but I don't know if there's anything else.  
-Therefore, I recommend using the pytorch code to reproduce the results of the paper. I also put the colab file using pytorch on the github.
+The file converted to Tensorflow placed on the github, but the performance was different from that of Torch.  
+I thought I had created the same structure (except for adjusting the leading rate), but I don't know if there's anything wrong.
+The model made of tensorflow only carried out training of 1 epoch. Because the more train the model, the worse I get the results. I think it's a problem with hyperparameters. If you know the problem, please leave a comment on the [blog](https://simpling.tistory.com/31).
+
+Therefore, I recommend using the pytorch code to reproduce the results of the paper. I also put the colab file using pytorch and tensorflow on the github.
 
 ------------------------------------------------------------------------------------------------------------
 ## Reference
