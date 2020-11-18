@@ -1,6 +1,6 @@
-# SDE-Net
-### Paper: [SDE-Net: Equipping Deep Neural Networks with Uncertainty Estimates](https://arxiv.org/abs/2008.10546)
-----------------------------------------------------------------------------------------------
+# SDE-Net : [SDE-Net: Equipping Deep Neural Networks with Uncertainty Estimates](https://arxiv.org/abs/2008.10546)
+
+
 ## Requirements
 - Tensorflow 2.3 ver.
 - tensorflow_addons 0.11.2 ver.
