@@ -324,7 +324,6 @@ def train_net(x, y):
     optimizer_fc.apply_gradients(zip(fc_gradient, model.fc_layers.trainable_variables))
     train_loss(loss)
 
-
 @tf.function
 def train_diffusion(real_x):
     with tf.GradientTape(watch_accessed_variables=False) as real_tape_diffusion:
@@ -359,11 +358,12 @@ def train_diffusion(real_x):
 
     diffusion_gradient2 = [(tf.clip_by_norm(grad, 100)) for grad in diffusion_gradient]
 
+    diffusion_gradient = [
+        grad1 + grad2 for grad1, grad2 in zip(diffusion_gradient1, diffusion_gradient2)
+    ]
+
     optimizer_diffusion.apply_gradients(
-        zip(diffusion_gradient1, model.diffusion.trainable_variables)
-    )
-    optimizer_diffusion.apply_gradients(
-        zip(diffusion_gradient2, model.diffusion.trainable_variables)
+        zip(diffusion_gradient, model.diffusion.trainable_variables)
     )
     in_loss(real_loss)
     out_loss(fake_loss)
