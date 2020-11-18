@@ -408,7 +408,7 @@ def train_diffusion(real_x):
 
 
 
-The official code is in [Github](github.com/Lingkai-Kong/SDE-Net) with pytorch, so when I train it using a colab, I got a similar result as suggested in the paper.  
+The official code is in [Github](https://github.com/Lingkai-Kong/SDE-Net) with pytorch, so when I train it using a colab, I got a similar result as suggested in the paper.  
 
 The file converted to Tensorflow was created separately and placed on the github, but the performance was different from that of Torch.  
 I thought I had created the same structure (except for adjusting the leading rate), but I don't know if there's anything else.  
