@@ -5,7 +5,7 @@ import tensorflow_addons as tfa
 from warnings import filterwarnings
 
 filterwarnings("ignore")
-epochs = 60
+epochs = 2
 lr = 1e-4
 lr2 = 0.01
 seed = 0
@@ -124,11 +124,12 @@ def train_diffusion(real_x):
 
     diffusion_gradient2 = [(tf.clip_by_norm(grad, 100)) for grad in diffusion_gradient]
 
+    diffusion_gradient = [
+        grad1 + grad2 for grad1, grad2 in zip(diffusion_gradient1, diffusion_gradient2)
+    ]
+
     optimizer_diffusion.apply_gradients(
-        zip(diffusion_gradient1, model.diffusion.trainable_variables)
-    )
-    optimizer_diffusion.apply_gradients(
-        zip(diffusion_gradient2, model.diffusion.trainable_variables)
+        zip(diffusion_gradient, model.diffusion.trainable_variables)
     )
     in_loss(real_loss)
     out_loss(fake_loss)

@@ -10,7 +10,7 @@ tf.random.set_seed(0)
 class Drift(Layer):
     def __init__(self):
         super(Drift, self).__init__(name="drift_net")
-        self.fc = Dense(50)  # input : 50
+        self.fc = Dense(50, kernel_initializer="he_normal")  # input : 50
         self.relu = ReLU()
 
     def call(self, t, x):
@@ -22,7 +22,7 @@ class Diffusion(Layer):
     def __init__(self):
         super(Diffusion, self).__init__(name="diffusion_net")
         self.relu = ReLU()
-        self.fc1 = Dense(100)  # input : 50
+        self.fc1 = Dense(100, kernel_initializer="he_normal")  # input : 50
         self.fc2 = Dense(1)  # input : 100
 
     def call(self, t, x):
@@ -36,7 +36,9 @@ class SDENet(Model):
     def __init__(self, layer_depth):
         super(SDENet, self).__init__(name="SDE_Net")
         self.layer_depth = layer_depth
-        self.downsampling_layers = Dense(50)  # batch, 50
+        self.downsampling_layers = Dense(
+            50, kernel_initializer="he_normal"
+        )  # batch, 50
         self.drift = Drift()  # batch, 1
         self.diffusion = Diffusion()
         self.fc_layers = Sequential(
