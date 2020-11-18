@@ -262,7 +262,7 @@ class SDENet(Model):
 -------------------------------------------------------------------
 ## Objective function for training
 
-![image](https://user-images.githubusercontent.com/46440177/99501530-3800c900-29bf-11eb-8715-06d2d88a7e0d.png)
+![image](https://user-images.githubusercontent.com/46440177/99501530-3800c900-29bf-11eb-8715-06d2d88a7e0d.png)  
 (L: loss function, P_train: distribution for training data, P_ood: OOD data, T: terminal time of the stochastic process)
  
  first term : Minimize Loss with training data and learn.
@@ -415,12 +415,12 @@ I thought I had created the same structure (except for adjusting the leading rat
 
 ------------------------------------------------------------------------------------------------------------
 ## Reference
-> ["SDE-Net: Equipping Deep Neural Networks with Uncertainty Estimates code"](https://arxiv.org/abs/2008.10546) (2020, ICML) - Lingkai Kong et al.
-> https://en.wikipedia.org/wiki/Euler%E2%80%93Maruyama_method
-> ["Neural Ordinary Differential Equations"](https://arxiv.org/abs/1806.07366) - Chen et al.
-> https://en.wikipedia.org/wiki/Euler_method
-> https://github.com/msurtsukov/neural-ode/blob/master/Neural%20ODEs.ipynb
-> https://github.com/Lingkai-Kong/SDE-Net
+> ["SDE-Net: Equipping Deep Neural Networks with Uncertainty Estimates code"](https://arxiv.org/abs/2008.10546) (2020, ICML) - Lingkai Kong et al.  
+> https://en.wikipedia.org/wiki/Euler%E2%80%93Maruyama_method  
+> ["Neural Ordinary Differential Equations"](https://arxiv.org/abs/1806.07366) - Chen et al.  
+> https://en.wikipedia.org/wiki/Euler_method  
+> https://github.com/msurtsukov/neural-ode/blob/master/Neural%20ODEs.ipynb  
+> https://github.com/Lingkai-Kong/SDE-Net  
  
 
 
