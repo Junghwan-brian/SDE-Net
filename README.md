@@ -421,7 +421,7 @@ Therefore, I recommend using the pytorch code to reproduce the results of the pa
 
 ------------------------------------------------------------------------------------------------------------
 ## Reference
-> ["SDE-Net: Equipping Deep Neural Networks with Uncertainty Estimates code"](https://arxiv.org/abs/2008.10546) (2020, ICML) - Lingkai Kong et al.  
+> ["SDE-Net: Equipping Deep Neural Networks with Uncertainty Estimates"](https://arxiv.org/abs/2008.10546) (2020, ICML) - Lingkai Kong et al.  
 > https://en.wikipedia.org/wiki/Euler%E2%80%93Maruyama_method  
 > ["Neural Ordinary Differential Equations"](https://arxiv.org/abs/1806.07366) - Chen et al.  
 > https://en.wikipedia.org/wiki/Euler_method  
