@@ -414,7 +414,7 @@ The file converted to Tensorflow placed on the github, but the performance was d
 I thought I had created the same structure (except for adjusting the leading rate), but I don't know if there's anything wrong.
 
 I've uploaded a colab file using Tensorflow, so if you know the problem, please leave a comment on the [blog](https://simpling.tistory.com/31).  
-(Note that the model only conducted one epoch training and the more I trained, the worse the results were. However, the results of the 1 epoch show better performance than the previous models (like DeepEnsemble). I think it's probably a hyperparameter problem.)
+(Note that the model only conducted one epoch training and the more I trained, the worse the results were.) I think it's probably a hyperparameter problem.)
 
 
 Therefore, I recommend using the pytorch code to reproduce the results of the paper. I also put the colab file using pytorch and tensorflow on the github.
